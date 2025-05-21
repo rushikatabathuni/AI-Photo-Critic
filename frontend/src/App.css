@@ -1,0 +1,10 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+/* Custom styles for Filerobot Editor */
+.SfxEditor-wrapper {
+  height: calc(100vh - 150px) !important;
+}
