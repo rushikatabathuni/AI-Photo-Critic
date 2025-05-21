@@ -57,8 +57,11 @@ Frontend runs at `http://localhost:xxxx`
 
 ## 📸 Sample
 
-![upload-demo](https://your-image-link.com/upload.jpg)
-> *Upload page with image preview and feedback.*
+![Home Page](assets/home.png)
+![Demo Analysis](assets/analysis1.png)
+![Demo Analysis1](assets/analysis2.png)
+![Editor Page](assets/edit.png)
+
 
 Inspired by open-source work in AI aesthetics and image understanding.
 
