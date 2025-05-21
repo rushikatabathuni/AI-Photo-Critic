@@ -13,6 +13,28 @@ This is a full-stack web application that allows users to upload artwork, receiv
 - Built using **ReactJS (Vite + Tailwind)** for frontend and **FastAPI** for backend
 - Aesthetic and feedback models based on `aesthetic-predictor-v2-5` and `CLIP`
 
+## 🧠 How It Works (Behind the Scenes)
+
+### 1. Aesthetic Scoring (`aesthetic_score.py`)
+
+- Loads a pretrained **aesthetic-predictor-v2-5** model dynamically using PyTorch.
+- Preprocesses user-uploaded images.
+- Outputs a continuous aesthetic score between 1 and 10 indicating the artwork’s quality.
+- Utilizes GPU acceleration if available, else CPU fallback.
+
+### 2. Detailed Image Analysis (`clip_analysis.py`)
+
+- Uses a local TorchScript version of **OpenAI's CLIP** (ViT-B-32).
+- Defines a set of human-readable feedback concepts (e.g., saturation, contrast, lighting).
+- Encodes both image and text prompts, computing similarity scores.
+- Picks top 3 matching feedback statements and compiles actionable improvement suggestions.
+- Outputs JSON with feedback and suggestions for the frontend to display.
+
+### 3. Image Editing
+
+- Frontend provides sliders for brightness, contrast, and saturation.
+- Adjustments are applied live on the client side for immediate user feedback.
+
 
 ## 🚀 Getting Started
 
